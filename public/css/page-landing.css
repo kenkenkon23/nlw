@@ -1,0 +1,105 @@
+#container {
+  margin: auto;
+  width: min(90%, 170rem); /*minimo entre 90% a 112rem*/
+  /*vai ficar com 90% até chegar no 112rem*/
+}
+
+#page-landing {
+  background: linear-gradient(
+      320deg,
+      rgb(0, 200, 255) 0%,
+      rgb(0, 220, 200) 100%
+    )
+    no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgb(255, 200, 100);
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center; /* alinha o Y ao X */
+  justify-content: center; /* alinha o X ao Y */
+
+  margin: 0 auto; /*auto só serve para as laterais.*/
+
+  transition: background 2  00ms;
+}
+
+.visit a:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+/*desktop version*/
+/*colocar a regra dentro dos parenteses*/
+/* vai aplicar o @media quando a largura minima é de 760px ou maior*/
+@media(min-width: 760px){
+  #container{
+    padding: 5rem 2rem;
+    
+    /*shorthand background: image repeat position/size*/
+    background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+    /*
+    background-position: top center; top alinha o eixo Y e o center o eixo X
+    top calcula a partir de cima, bottom por baixo*/
+  }
+
+  header{
+    display: flex;
+    /*align-itemms e justify-content apenas quando há display:flex*/
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location, h1, .visit p{
+    height: initial; /*valor inicial antes de se usar o CSS*/
+    text-align: initial; /*valor inicial*/
+  }
+  .location{
+    font-size: 2.4rem;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  main h1{
+    /*8vw -> 8% da largura do documento*/
+    /*mínimo: 4rem; ideal: 8vw; máximo: 8.4rem*/
+    font-size: clamp(4rem, 8vw, 8.4rem); 
+    font-weight: 800;
+
+    width: min(300px, 80%);
+
+    line-height: 0.88;
+    
+    margin-top: clamp(10%, 9vh, 12%);
+    margin-bottom: 4rem;
+  }
+
+  .visit p{
+    font-size: 2.4rem;
+    line-height: 1;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+  .visit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .visit a{
+    margin: initial; /*tira a margem definida no .visit a{ margin: auto }*/
+  }
+
+}

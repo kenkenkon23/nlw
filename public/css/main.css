@@ -1,0 +1,25 @@
+/*seletor {
+    declaração
+    propriedade: valor
+}*/
+body, input, button, textarea{
+    font: 400 2rem/1 "Nunito", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*não vai somar os paddings nas medidas*/
+}
+
+body{
+    height: 100vh; /*vh = viewport height, ocupa toda a tela*/
+    color:white;
+    background: #ebf2f5;
+}
+
+:root  {
+    font-size: 62.5%;
+}
+
+
+
