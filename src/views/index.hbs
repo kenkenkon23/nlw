@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta - meta dados, configurações do documento
+        o UTF-8 é o conjunto de caracteres usados
+        o Viewport serve para se adaptar para outros aparelhos, a responsividade basicamente-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Nome da página-->
+    <title>HAPPY :)</title>
+
+    <!--ícone da página
+        HREF se refere ao diretório da imagem
+        O rel se refere ao tipo de relacionamento, como ícone ou link...-->
+    <link rel="icon" href="/images/logo-icon.png">
+    <!--css da pagina-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/page-landing.css">
+    <link rel="stylesheet" href="/css/animations.css">
+
+    <!--importa as fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body id="corpo">
+    <div id="page-landing">
+        <div id="container">
+
+            <!--Cabeçalho-->
+            <header id="cabecalho">
+                <img id="logo" class="animateUp" src="/images/logo.svg" alt="Logo da happy">
+                <div class="location animateUp">
+                    <b>{{city}}</b> 
+                    <p>Brasil</p>
+                </div>
+            </header>
+
+            <!--O que há de principal-->
+            <main>
+
+                <h1 class="animateUp">Leve felicidade ao mundo</h1>
+                <section class="visit">
+                    <p class="animateUp">Visite orfanatos e mude o dia de muitas crianças</p>
+                    <a id="botao" class="animateUp" href="/orphanages" title="visite os orfanatos">
+                        <img src="/images/arrow.svg" alt="ir ao mapa">
+                    </a>
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
