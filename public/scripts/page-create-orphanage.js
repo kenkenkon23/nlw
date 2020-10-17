@@ -92,3 +92,14 @@ function toggleSelect(event){
 
     //verificar se sim ou não
 }
+
+function validate(event){
+
+    if(document.querySelector('[name=lat]').value == ""){
+        //validar se lat e lng taoo prenchidos
+        event.preventDefault()
+        alert('Escolher um ponto no mapa.')
+    }
+   
+    
+}

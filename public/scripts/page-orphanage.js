@@ -1,4 +1,8 @@
 //opções do mapa. é um argumento do const map
+const spanLat = document.querySelector('span[data-lat]').dataset.lat
+const spanLng = document.querySelector('span[data-lng]').dataset.lng
+console.log(spanLat);
+console.log(spanLng);
 const options = {
     dragging: false,
     touchZoom: false,
@@ -8,7 +12,7 @@ const options = {
 }
 
 //create map
-const map = L.map('mapid', options).setView([-23.5662359,-46.6441534], 16);
+const map = L.map('mapid', options).setView([spanLat,spanLng], 16);
 
 
 //create tile layer
@@ -25,8 +29,8 @@ const icon = L.icon({
 })
 
 //create marker
-L.marker([-23.5662359,-46.6441534], {icon}).addTo(map)
-    .bindPopup(popup)
+
+L.marker([spanLat,spanLng], {icon}).addTo(map)
 
 //image gallery
 function selectImage(event){

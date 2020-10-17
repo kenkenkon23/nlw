@@ -123,8 +123,24 @@ main{
     color: #5c8599;
 }
 .open-details .open-on-weekends{
+    
+    border-radius: 20px;
+    
+}
+.open-on-weekends.open{
     background: linear-gradient(150deg, #EDFFF6 8%, #ffffff 92%);
     border: 1px solid #A1E9C5;
-    border-radius: 20px;
+}
+
+.open-on-weekends.open p{
     color: #37c77f;
+}
+
+.open-on-weekends.closed{
+    background: linear-gradient(150deg, #ffeded 8%, #ffffff 92%);
+    border: 1px solid #e9a1a1;
+}
+
+.open-on-weekends.closed p{
+    color: #c73737;
 }
